@@ -67,8 +67,7 @@ namespace urban_planner
             Console.WriteLine($"Constructed on {_dateConstructed}");
             Console.WriteLine($"Owned by {_owner}");
             Console.WriteLine($"{Volume} cubic feet of space");
-            Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine("\n\n");
         }
 
 
