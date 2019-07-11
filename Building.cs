@@ -12,7 +12,6 @@ namespace urban_planner
         private string _address;
 
         private string _owner;
-
         // public properties
 
         public int Stories { get; set; }
@@ -20,6 +19,8 @@ namespace urban_planner
         public double Width { get; set; }
 
         public double Depth { get; set; }
+
+        public string BuildingName { get; set; }
 
         public double Volume
         {
@@ -49,6 +50,7 @@ namespace urban_planner
             _owner = Purchaser;
         }
 
+
         /* example output: 100 Main Street
         // ---------------
         // Designed by Steve Brownlee
@@ -58,12 +60,14 @@ namespace urban_planner
 
         public void BuildinInfo()
         {
+            Console.WriteLine($"{BuildingName}");
             Console.WriteLine($"{_address}");
             Console.WriteLine("------------------");
             Console.WriteLine($"Designed by {_designer}");
             Console.WriteLine($"Constructed on {_dateConstructed}");
             Console.WriteLine($"Owned by {_owner}");
             Console.WriteLine($"{Volume} cubic feet of space");
+            Console.WriteLine("\n\n");
         }
 
 
