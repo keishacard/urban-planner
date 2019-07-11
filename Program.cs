@@ -12,6 +12,7 @@ namespace urban_planner
 
             var Hogwarts = new Building("777 Forbidden Forest Way, Scottish Highlands, UK")
             {
+                BuildingName = "Hogwarts",
                 Stories = 17,
                 Depth = 500,
                 Width = 500
@@ -20,6 +21,7 @@ namespace urban_planner
 
             var DraculasCastle = new Building("Strada General Traian Moșoiu 24, Bran 507025, Romania")
             {
+                BuildingName = "Dracula's Castle",
                 Stories = 13,
                 Depth = 333,
                 Width = 333,
@@ -27,6 +29,7 @@ namespace urban_planner
 
             var WinchesterHouse = new Building("525 S Winchester Blvd, San Jose, CA 95128")
             {
+                BuildingName = "Winchester House",
                 Stories = 7,
                 Depth = 54,
                 Width = 35,
