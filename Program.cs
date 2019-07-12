@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace urban_planner
 {
@@ -10,7 +11,7 @@ namespace urban_planner
 
             // Building FiveOneTwoEigth = new Building("512 8th Avenue");
 
-            var Hogwarts = new Building("777 Forbidden Forest Way, Scottish Highlands, UK")
+            var Hogwarts = new Building("777 Scottish Highlands Way")
             {
                 BuildingName = "Hogwarts",
                 Stories = 17,
@@ -19,7 +20,7 @@ namespace urban_planner
 
             };
 
-            var DraculasCastle = new Building("Strada General Traian Moșoiu 24, Bran 507025, Romania")
+            var DraculasCastle = new Building("666 Strada Romania")
             {
                 BuildingName = "Dracula's Castle",
                 Stories = 13,
@@ -27,7 +28,7 @@ namespace urban_planner
                 Width = 333,
             };
 
-            var WinchesterHouse = new Building("525 S Winchester Blvd, San Jose, CA 95128")
+            var WinchesterHouse = new Building("525 S Winchester Blvd")
             {
                 BuildingName = "Winchester House",
                 Stories = 7,
@@ -35,18 +36,121 @@ namespace urban_planner
                 Width = 35,
             };
 
+            var AmityvilleHouse = new Building("112 Ocean Ave")
+            {
+                BuildingName = "Amityville House",
+                Stories = 3,
+                Depth = 25,
+                Width = 35,
+            };
+
+            var ThreeBroomsticks = new Building("3 Hogsmeade Lane")
+            {
+                BuildingName = "The Three Broomsticks Pub",
+                Stories = 2,
+                Depth = 20,
+                Width = 13,
+            };
+
+            var Honeydukes = new Building("12 Hogsmeade Lane")
+            {
+                BuildingName = "Honeydukes Sweets Shoppe",
+                Stories = 2,
+                Depth = 22,
+                Width = 22,
+            };
+
+            var Gingerbread = new Building("9 Gretel Ave")
+            {
+                BuildingName = "Gingerbread House",
+                Stories = 1,
+                Depth = 13,
+                Width = 13,
+            };
+
 
             Hogwarts.Construct();
-            Hogwarts.Purchase("Dumbledore");
-            Hogwarts.BuildinInfo();
+            Hogwarts.Purchase("Albus Dumbledore");
+            // Hogwarts.BuildinInfo();
 
             DraculasCastle.Construct();
             DraculasCastle.Purchase("Vlad the Impaler");
-            DraculasCastle.BuildinInfo();
+            // DraculasCastle.BuildinInfo();
 
             WinchesterHouse.Construct();
             WinchesterHouse.Purchase("Sarah Winchester");
-            WinchesterHouse.BuildinInfo();
+            // WinchesterHouse.BuildinInfo();
+
+            AmityvilleHouse.Construct();
+            AmityvilleHouse.Purchase("Kathleen Lutz");
+            // AmityvilleHouse.BuildinInfo();
+
+            ThreeBroomsticks.Construct();
+            ThreeBroomsticks.Purchase("Madam Rosemerta");
+            // ThreeBroomsticks.BuildinInfo();
+
+            Honeydukes.Construct();
+            Honeydukes.Purchase("Ambrosius Flume");
+            // Honeydukes.BuildinInfo();
+
+            Gingerbread.Construct();
+            Gingerbread.Purchase("Wilhelm Grimm");
+            // Gingerbread.BuildinInfo();
+
+            // CITY STUFF
+
+            /*Name of the city.
+           The mayor of the city.
+           Year the city was established.
+           A collection of all of the buildings in the city.
+           A method to add a building to the city.*/
+
+            var Hogsmeade = new City()
+            {
+                cityName = "Hogsmeade",
+                Mayor = "Aberforth Dumbledore",
+                yearEstablished = 1612,
+                // BuildingList = new List<Building> {
+                //     Honeydukes,
+                //     Hogwarts,
+                //     ThreeBroomsticks
+                // }
+            };
+
+            var AmericaCity = new City()
+            {
+                cityName = "Ghostville",
+                Mayor = "Lorraine Warren",
+                yearEstablished = 1884,
+                // BuildingList
+            };
+
+            var OldworldCity = new City()
+            {
+                cityName = "Oldenburg",
+                Mayor = "Baba Yaga",
+                yearEstablished = 666,
+                // BuilingList
+            };
+
+
+            Hogsmeade.ConstructCity();
+            Hogsmeade.AddBuilding(Honeydukes);
+            Hogsmeade.AddBuilding(Hogwarts);
+            Hogsmeade.AddBuilding(ThreeBroomsticks);
+
+            AmericaCity.ConstructCity();
+            AmericaCity.AddBuilding(WinchesterHouse);
+            AmericaCity.AddBuilding(AmityvilleHouse);
+
+            OldworldCity.ConstructCity();
+            OldworldCity.AddBuilding(DraculasCastle);
+            OldworldCity.AddBuilding(Gingerbread);
+
+
+            Hogsmeade.CityInfo();
+            AmericaCity.CityInfo();
+            OldworldCity.CityInfo();
 
         }
     }
