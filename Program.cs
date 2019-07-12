@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace urban_planner
 {
@@ -109,7 +110,11 @@ namespace urban_planner
                 cityName = "Hogsmeade",
                 Mayor = "Aberforth Dumbledore",
                 yearEstablished = 1612,
-                BuildingList =
+                // BuildingList = new List<Building> {
+                //     Honeydukes,
+                //     Hogwarts,
+                //     ThreeBroomsticks
+                // }
             };
 
             var AmericaCity = new City()
@@ -128,9 +133,19 @@ namespace urban_planner
                 // BuilingList
             };
 
+
+            Hogsmeade.ConstructCity();
             Hogsmeade.AddBuilding(Honeydukes);
             Hogsmeade.AddBuilding(Hogwarts);
             Hogsmeade.AddBuilding(ThreeBroomsticks);
+
+            AmericaCity.ConstructCity();
+            AmericaCity.AddBuilding(WinchesterHouse);
+            AmericaCity.AddBuilding(AmityvilleHouse);
+
+            OldworldCity.ConstructCity();
+            OldworldCity.AddBuilding(DraculasCastle);
+            OldworldCity.AddBuilding(Gingerbread);
 
 
             Hogsmeade.CityInfo();

@@ -39,7 +39,7 @@ namespace urban_planner
             Console.WriteLine("------------------");
             Console.WriteLine($"Mayor {Mayor}");
             Console.WriteLine($"Established in {yearEstablished}");
-            Console.WriteLine($"Buildings in this city: {BuildingList}");
+            Console.WriteLine($"Buildings in this city: ");
             foreach (Building building in BuildingList)
             {
                 building.BuildinInfo();

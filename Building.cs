@@ -4,7 +4,7 @@ namespace urban_planner
 {
     public class Building
     {
-        // private fields
+        // private fields, 'field' bc it isn't able to be changed with get;set;
         private string _designer = "Keisha";
 
         private DateTime _dateConstructed;
@@ -12,7 +12,8 @@ namespace urban_planner
         private string _address;
 
         private string _owner;
-        // public properties
+
+        // public properties, 'property' bc it's a poroperty that can be changed
 
         public int Stories { get; set; }
 
@@ -30,7 +31,7 @@ namespace urban_planner
             }
         }
 
-        // constructor
+        // constructor -- why doesn't it need void?
 
         public Building(string BuildingAddress)
         {
@@ -38,7 +39,7 @@ namespace urban_planner
             _address = BuildingAddress;
         }
 
-        // public methods
+        // public methods, 'void' bc it's not going to return andything
 
         public void Construct()
         {
