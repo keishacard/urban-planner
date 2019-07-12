@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace urban_planner
 {
@@ -18,9 +19,18 @@ namespace urban_planner
 
         public string cityBuildings { get; set; }
 
-        // methods
+        public List<Building> BuildingList { get; set; }
 
-        // public void ConstructCity();
+        // methods
+        public void ConstructCity()
+        {
+            BuildingList = new List<Building>();
+        }
+
+        public void AddBuilding(Building BuildingName)
+        {
+            BuildingList.Add(BuildingName);
+        }
 
         // print
         public void CityInfo()
@@ -29,7 +39,11 @@ namespace urban_planner
             Console.WriteLine("------------------");
             Console.WriteLine($"Mayor {Mayor}");
             Console.WriteLine($"Established in {yearEstablished}");
-            // Console.WriteLine($"Owned by {_owner}");
+            Console.WriteLine($"Buildings in this city: {BuildingList}");
+            foreach (Building building in BuildingList)
+            {
+                building.BuildinInfo();
+            }
             Console.WriteLine("\n\n");
         }
 

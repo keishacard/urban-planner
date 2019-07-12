@@ -70,31 +70,31 @@ namespace urban_planner
 
             Hogwarts.Construct();
             Hogwarts.Purchase("Albus Dumbledore");
-            Hogwarts.BuildinInfo();
+            // Hogwarts.BuildinInfo();
 
             DraculasCastle.Construct();
             DraculasCastle.Purchase("Vlad the Impaler");
-            DraculasCastle.BuildinInfo();
+            // DraculasCastle.BuildinInfo();
 
             WinchesterHouse.Construct();
             WinchesterHouse.Purchase("Sarah Winchester");
-            WinchesterHouse.BuildinInfo();
+            // WinchesterHouse.BuildinInfo();
 
             AmityvilleHouse.Construct();
             AmityvilleHouse.Purchase("Kathleen Lutz");
-            AmityvilleHouse.BuildinInfo();
+            // AmityvilleHouse.BuildinInfo();
 
             ThreeBroomsticks.Construct();
             ThreeBroomsticks.Purchase("Madam Rosemerta");
-            ThreeBroomsticks.BuildinInfo();
+            // ThreeBroomsticks.BuildinInfo();
 
             Honeydukes.Construct();
             Honeydukes.Purchase("Ambrosius Flume");
-            Honeydukes.BuildinInfo();
+            // Honeydukes.BuildinInfo();
 
             Gingerbread.Construct();
             Gingerbread.Purchase("Wilhelm Grimm");
-            Gingerbread.BuildinInfo();
+            // Gingerbread.BuildinInfo();
 
             // CITY STUFF
 
@@ -109,7 +109,7 @@ namespace urban_planner
                 cityName = "Hogsmeade",
                 Mayor = "Aberforth Dumbledore",
                 yearEstablished = 1612,
-                // cityBuildings = 22,
+                BuildingList =
             };
 
             var AmericaCity = new City()
@@ -117,7 +117,7 @@ namespace urban_planner
                 cityName = "Ghostville",
                 Mayor = "Lorraine Warren",
                 yearEstablished = 1884,
-                // cityBuildings = 22,
+                // BuildingList
             };
 
             var OldworldCity = new City()
@@ -125,8 +125,12 @@ namespace urban_planner
                 cityName = "Oldenburg",
                 Mayor = "Baba Yaga",
                 yearEstablished = 666,
-                // cityBuildings = 22,
+                // BuilingList
             };
+
+            Hogsmeade.AddBuilding(Honeydukes);
+            Hogsmeade.AddBuilding(Hogwarts);
+            Hogsmeade.AddBuilding(ThreeBroomsticks);
 
 
             Hogsmeade.CityInfo();
